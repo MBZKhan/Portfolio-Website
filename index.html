@@ -29,12 +29,12 @@
       <div class="text-header">
         <h2>Software Engineer</h2>
         <h1>
-          Hi, I'm <span>Muhammad Bilal Zahid Khan </span> 
+          Hi, I'm <span>Muhammad Bilal Zahid Khan </span>
           from Lahore, Pakistan.
         </h1>
       </div>
     </div>
-    <!-- About Sectio -->
+    <!-- About Section -->
     <div id="about">
       <div class="container">
         <div class="row">
@@ -50,13 +50,59 @@
               ab.
             </p>
             <div class="tab-titles">
-              <p class="tab-links">Skills</p>
-              <p class="tab-links">Experience</p>
-              <p class="tab-links">Education</p>
+              <p class="tab-links active-link" onclick="openTab('Skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="openTab('Experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="openTab('Education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="Skills">
+              <ul>
+                <li><span>UI/UX</span><br />Designing Web/Mobile interface</li>
+                <li><span>UI/UX</span><br />Designing Web/Mobile interface</li>
+                <li><span>UI/UX</span><br />Designing Web/Mobile interface</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="Experience">
+              <ul>
+                <li>
+                  <span>01/2024 - Present</span><br />React Native Intern at
+                  Argon Tech Inc
+                </li>
+                <li>
+                  <span>05/2022 - 09/2022</span><br />Team Leader - Virtual
+                  Intern at GAOTek Inc
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="Education">
+              <ul>
+                <li>
+                  <span>02/2020 - 02/2024</span><br />BSSE from COMSATS
+                  University Islamabad, Lahore
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- Services -->
+    <script>
+      var tabLinks = document.getElementsByClassName("tab-links");
+      var tabContents = document.getElementsByClassName("tab-contents");
+      function openTab(tabName) {
+        for (tabLink of tabLinks) {
+          tabLink.classList.remove("active-link");
+        }
+        for (tabContent of tabContents) {
+          tabContent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabName).classList.add("active-tab");
+      }
+    </script>
   </body>
 </html>
