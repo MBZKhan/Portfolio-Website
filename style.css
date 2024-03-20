@@ -80,6 +80,7 @@ nav ul li a:hover::after {
 
 .text-header {
   position: absolute;
+  top: 40%;
   left: 5%;
   width: 40%;
   color: #333;
